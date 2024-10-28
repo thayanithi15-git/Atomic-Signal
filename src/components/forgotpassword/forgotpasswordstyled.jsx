@@ -11,7 +11,7 @@ export const ForgotPasswordStyled = {
     flexDirection: "column",
   },
   body: {
-    height: "70%",
+    height: "60%",
     display: "flex",
     flexDirection: "column",
     gap: "1rem"
@@ -24,7 +24,7 @@ export const ForgotPasswordStyled = {
     // backgroundColor: "aquamarine",
     display: "flex",
     flexDirection: "column",
-    gap: "1rem"
+    gap: "1.5rem"
     // justifyContent: "space-between"
   },
   welcomeQuotes: {
@@ -41,19 +41,20 @@ export const ForgotPasswordStyled = {
   quotes: {
     fontSize: "14px",
     color: "#555",
-    width: "80%"
+    width: "80%",
+    marginTop: "2%"
   },
   auth: {
-    // marginTop: "1rem",
+    marginTop: "2%",
     // marginBottom: "1rem",
     height: "45%",
     display: "flex",
     flexDirection: "column",
-    gap: "0.3rem"
+    gap: "0.5rem"
   },
   emailPass: {
-    // fontSize: "0.9rem",
-    fontWeight: "500",
+    fontSize: "12px",
+    // fontWeight: "500",
     // marginBottom: "0.5rem",
   },
   input: {
@@ -83,6 +84,7 @@ export const ForgotPasswordStyled = {
   
   getlink: {
     fontSize: "14px",
+    marginTop: "3%",
     backgroundColor: "#49c792",
     color: "white",
     textTransform: "none",
@@ -93,9 +95,10 @@ export const ForgotPasswordStyled = {
     alignItems: "center",
     justifyContent: "center",
     // marginTop: "1rem",
-    color: "#333",
+    color: "#5C6266",
     fontSize: "14px",
-    gap: "0.5rem"
+    gap: "0.5rem",
+    marginTop: "2%"
   },
   signupLogin: {
     color: "#353448",

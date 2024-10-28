@@ -8,14 +8,22 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { GoBell } from "react-icons/go";
 import { LiaSignOutAltSolid } from "react-icons/lia";
 import { SidebarStyled } from "./sidebarstyled";
+import { useNavigate } from "react-router-dom";
 
 export default function Sidebar({onSidebar}) {
 
   const [ team , setTeam] = useState(2);
+  const navigate = useNavigate();
 
   const handleSideIcon = (id) => {
     setTeam((prev) => (prev===id? "" : id))
     onSidebar(id)
+  }
+
+  const handleClose = (id) => {
+    if(id===3){
+      navigate("/signup");
+    }
   }
 
   const SidebarIcons = [
@@ -72,7 +80,7 @@ export default function Sidebar({onSidebar}) {
         <Box sx={SidebarStyled.options}>
           {SidebarOptions.map((item) => (
             <Box sx={SidebarStyled.iconcon} key={item.id}>
-              <Box sx={SidebarStyled.iconimgcontainer}>{item.icon}</Box>
+              <Box sx={SidebarStyled.iconimgcontainer} onClick={() => handleClose(item.id)}>{item.icon}</Box>
             </Box>
           ))}
         </Box>

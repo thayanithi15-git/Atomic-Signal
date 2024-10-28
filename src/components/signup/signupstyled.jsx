@@ -25,6 +25,13 @@ export const SignupStyled = {
       fontSize: "12px",
       fontWeight: 400,
     },
+    signupbuttons: {
+      marginTop: "4%",
+      backgroundColor: "#49c792",
+            color: "white",
+            textTransform: "none",
+            fontFamily: "Poppins, sans-serif",
+    },
     tags: {
       display: "flex",
       flexDirection: "column",
@@ -93,7 +100,8 @@ export const SignupStyled = {
       width: "100%",
       "&::placeholder": {
         fontFamily: "Poppins, sans-serif",
-        fontWeight: 500,
+        fontWeight: 400,
+        color: "grey"
       },
       "& .MuiOutlinedInput-root": {
         height: "35px",

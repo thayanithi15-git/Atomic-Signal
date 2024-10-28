@@ -17,9 +17,10 @@ export const TeamStyled = {
         alignItems: "center",
     },
     body: {
-        height: "86%",
+        height: "82%",
         width: "95%",
         backgroundColor: "white",
-        borderRadius: "8px"
+        borderRadius: "8px",
+        overflow: "hidden"
     }
 }
