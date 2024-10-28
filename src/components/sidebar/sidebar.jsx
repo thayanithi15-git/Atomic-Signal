@@ -10,21 +10,20 @@ import { LiaSignOutAltSolid } from "react-icons/lia";
 import { SidebarStyled } from "./sidebarstyled";
 import { useNavigate } from "react-router-dom";
 
-export default function Sidebar({onSidebar}) {
-
-  const [ team , setTeam] = useState(2);
+export default function Sidebar({ onSidebar }) {
+  const [team, setTeam] = useState(2);
   const navigate = useNavigate();
 
   const handleSideIcon = (id) => {
-    setTeam((prev) => (prev===id? "" : id))
-    onSidebar(id)
-  }
+    setTeam((prev) => (prev === id ? "" : id));
+    onSidebar(id);
+  };
 
   const handleClose = (id) => {
-    if(id===3){
+    if (id === 3) {
       navigate("/signup");
     }
-  }
+  };
 
   const SidebarIcons = [
     {
@@ -69,8 +68,18 @@ export default function Sidebar({onSidebar}) {
         <Divider sx={SidebarStyled.hr} />
         <Box sx={SidebarStyled.sidebars}>
           {SidebarIcons.map((item) => (
-            <Box sx={SidebarStyled.iconcon} key={item.id} onClick={() => handleSideIcon(item.id)}>
-              <Box sx={ team==item.id ? SidebarStyled.iconimgcontainerclicked : SidebarStyled.iconimgcontainer}>{item.icon}</Box>
+            <Box
+              sx={SidebarStyled.iconcon}
+              key={item.id}
+              onClick={() => handleSideIcon(item.id)}>
+              <Box
+                sx={
+                  team == item.id
+                    ? SidebarStyled.iconimgcontainerclicked
+                    : SidebarStyled.iconimgcontainer
+                }>
+                {item.icon}
+              </Box>
               <Box sx={SidebarStyled.sidename}>{item.iconname}</Box>
             </Box>
           ))}
@@ -80,7 +89,11 @@ export default function Sidebar({onSidebar}) {
         <Box sx={SidebarStyled.options}>
           {SidebarOptions.map((item) => (
             <Box sx={SidebarStyled.iconcon} key={item.id}>
-              <Box sx={SidebarStyled.iconimgcontainer} onClick={() => handleClose(item.id)}>{item.icon}</Box>
+              <Box
+                sx={SidebarStyled.iconimgcontainer}
+                onClick={() => handleClose(item.id)}>
+                {item.icon}
+              </Box>
             </Box>
           ))}
         </Box>

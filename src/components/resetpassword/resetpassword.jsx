@@ -1,4 +1,10 @@
-import { Box, Button, TextField, InputAdornment, IconButton } from "@mui/material";
+import {
+  Box,
+  Button,
+  TextField,
+  InputAdornment,
+  IconButton,
+} from "@mui/material";
 import React, { useState } from "react";
 import { ResetPasswordStyled } from "./resetpasswordstyled";
 import Visibility from "@mui/icons-material/Visibility";
@@ -6,7 +12,6 @@ import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import { HeaderStyled } from "../header/headerstyled";
 
 export default function ResetPassword({ onLogin }) {
-
   const [showNewPassword, setShowNewPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
@@ -19,8 +24,8 @@ export default function ResetPassword({ onLogin }) {
   };
 
   const handleResetPassword = () => {
-    onLogin()
-  }
+    onLogin();
+  };
 
   return (
     <Box sx={ResetPasswordStyled.page}>
@@ -31,7 +36,7 @@ export default function ResetPassword({ onLogin }) {
             Please provide a new password for your account
           </Box>
         </Box>
-        
+
         <Box sx={ResetPasswordStyled.auth}>
           <Box sx={ResetPasswordStyled.emailPasscon}>
             <Box sx={ResetPasswordStyled.emailPass}>New password</Box>
@@ -42,7 +47,7 @@ export default function ResetPassword({ onLogin }) {
             type={showNewPassword ? "text" : "password"}
             sx={ResetPasswordStyled.inputs}
             InputProps={{
-                style: { ...HeaderStyled.inputsvaluefonts },
+              style: { ...HeaderStyled.inputsvaluefonts },
               endAdornment: (
                 <InputAdornment position="end">
                   <IconButton onClick={handleToggleNewPassword} edge="end">
@@ -53,12 +58,10 @@ export default function ResetPassword({ onLogin }) {
             }}
           />
         </Box>
-        
+
         <Box sx={ResetPasswordStyled.auth}>
           <Box sx={ResetPasswordStyled.emailPasscon}>
-            <Box sx={ResetPasswordStyled.emailPass}>
-              Confirm new password
-            </Box>
+            <Box sx={ResetPasswordStyled.emailPass}>Confirm new password</Box>
             <Box sx={ResetPasswordStyled.emailPassstar}>*</Box>
           </Box>
           <TextField
@@ -79,7 +82,9 @@ export default function ResetPassword({ onLogin }) {
         </Box>
       </Box>
       <Box sx={ResetPasswordStyled.footer}>
-        <Button sx={ResetPasswordStyled.loginButton} onClick={handleResetPassword}>
+        <Button
+          sx={ResetPasswordStyled.loginButton}
+          onClick={handleResetPassword}>
           Reset password
         </Button>
       </Box>

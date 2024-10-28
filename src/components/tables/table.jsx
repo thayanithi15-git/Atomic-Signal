@@ -31,9 +31,9 @@ import { HeaderStyled } from "../header/headerstyled";
 import { RxCross2 } from "react-icons/rx";
 
 const columns = [
-  { id: "name", label: "Name", minWidth: 180 },
-  { id: "designation", label: "Designation", minWidth: 190 },
-  { id: "department", label: "Department", minWidth: 150 },
+  { id: "name", label: "Name", minWidth: 200 },
+  { id: "designation", label: "Designation", minWidth: 160 },
+  { id: "department", label: "Department", minWidth: 140 },
   { id: "signals", label: "Signals", minWidth: 70 },
   {
     id: "performance",
@@ -41,7 +41,7 @@ const columns = [
     minWidth: 188,
     align: "center",
   },
-  { id: "reporting", label: "Reporting to", minWidth: 180 },
+  { id: "reporting", label: "Reporting to", minWidth: 230 },
   { id: "role", label: "Role", minWidth: 120 },
   { id: "email", label: "Email", minWidth: 280 },
   { id: "experience", label: "Experience", minWidth: 120 },
@@ -78,21 +78,13 @@ const signalColors = {
 
 const SignalIcons = ({ signals }) => {
   return (
-    <Box sx={{ display: "flex", gap: "8px" }}>
+    <Box sx={TableStyled.signaliconscon}>
       {signals.split(" ").map((signal) => (
         <Box
           key={signal}
           sx={{
-            width: 24,
-            height: 24,
+            ...TableStyled.signalmain,
             backgroundColor: signalColors[signal] || "#ccc",
-            borderRadius: "50%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "#fff",
-            fontWeight: "bold",
-            fontSize: "12px",
           }}>
           {signal}
         </Box>
@@ -118,7 +110,9 @@ export default function ColumnGroupingTable({ filterText }) {
 
   const handleSave = () => {
     setRows((prevRows) =>
-      prevRows.map((member) => (member.id === newMember.id ? newMember : member))
+      prevRows.map((member) =>
+        member.id === newMember.id ? newMember : member
+      )
     );
     setAdd(false);
   };
@@ -177,7 +171,6 @@ export default function ColumnGroupingTable({ filterText }) {
       )
     );
   };
-  
 
   const IOSSwitch = styled((props) => (
     <Switch
@@ -227,10 +220,8 @@ export default function ColumnGroupingTable({ filterText }) {
                 <TableCell
                   key={column.id}
                   align={column.align}
-                  style={{
-                    fontFamily: "Poppins, sans-serif",
-                    borderBottom: "2px solid #EDEDED",
-                    top: 0,
+                  sx={{
+                    ...TableStyled.tableCell,
                     minWidth: column.minWidth,
                     position: column.sticky ? "sticky" : "static",
                     right: column.sticky ? 0 : "auto",
@@ -255,11 +246,8 @@ export default function ColumnGroupingTable({ filterText }) {
                       <TableCell
                         key={column.id}
                         align={column.align}
-                        style={{
-                          fontFamily: "Poppins, sans-serif",
-                          height: "100%",
-                          width: "100%",
-                          borderBottom: "none",
+                        sx={{
+                          ...TableStyled.cellContent,
                           position: column.sticky ? "sticky" : "static",
                           right: column.sticky ? 0 : "auto",
                           backgroundColor: column.sticky ? "#fff" : "inherit",
@@ -302,38 +290,41 @@ export default function ColumnGroupingTable({ filterText }) {
                             {value}
                           </Box>
                         ) : column.id === "performance" ? (
-                          <Tooltip title={<span style={TableStyled.inputsvaluefonts}>Overall Need to improve</span>} arrow>
-                          <Box
-                            sx={TableStyled.speedometercon}>
-                              
-                            <ReactSpeedometer
-                            style={TableStyled.speedometer}
-                              width={100}
-                              height={50}
-                              maxValue={150}
-                              value={70.7}
-                              needleColor="#000000"
-                              needleHeightRatio={0.4}
-                              needleWidthRatio={0.1}
-                              segmentColors={[
-                                "#d73027",
-                                "#fc8d59",
-                                "#fee08b",
-                                "#91cf60",
-                                "#1a9850",
-                              ]}
-                              customSegmentStops={[0, 30, 60, 90, 120, 150]}
-                              ringWidth={5}
-                              needleTransitionDuration={2000}
-                              needleTransition="easeElastic"
-                              currentValueText=" "
-                              textColor="transparent"
-                              forceRender={true}
-                              arcWidth={1}
-                              cornerRadius={6 }
-                            />
-                            
-                          </Box>
+                          <Tooltip
+                            title={
+                              <span style={TableStyled.inputsvaluefonts}>
+                                Overall Need to improve
+                              </span>
+                            }
+                            arrow>
+                            <Box sx={TableStyled.speedometercon}>
+                              <ReactSpeedometer
+                                style={TableStyled.speedometer}
+                                width={100}
+                                height={50}
+                                maxValue={150}
+                                value={70.7}
+                                needleColor="#000000"
+                                needleHeightRatio={0.4}
+                                needleWidthRatio={0.1}
+                                segmentColors={[
+                                  "#d73027",
+                                  "#fc8d59",
+                                  "#fee08b",
+                                  "#91cf60",
+                                  "#1a9850",
+                                ]}
+                                customSegmentStops={[0, 30, 60, 90, 120, 150]}
+                                ringWidth={5}
+                                needleTransitionDuration={2000}
+                                needleTransition="easeElastic"
+                                currentValueText=" "
+                                textColor="transparent"
+                                forceRender={true}
+                                arcWidth={1}
+                                cornerRadius={6}
+                              />
+                            </Box>
                           </Tooltip>
                         ) : column.id === "actions" ? (
                           <Box sx={TableStyled.actions}>
@@ -391,8 +382,14 @@ export default function ColumnGroupingTable({ filterText }) {
           <Box sx={HeaderStyled.allinput}>
             {renderDialogFields(newMember, handleInputChange)}
             <Box sx={HeaderStyled.bottomdialogbuttons}>
-              <Button onClick={handleSave} sx={HeaderStyled.addmemberconfirm}>Save</Button>
-              <Button onClick={() => setAddDialogOpen(false)} sx={HeaderStyled.cancelconfirm}>Cancel</Button>
+              <Button onClick={handleSave} sx={HeaderStyled.addmemberconfirm}>
+                Save
+              </Button>
+              <Button
+                onClick={() => setAddDialogOpen(false)}
+                sx={HeaderStyled.cancelconfirm}>
+                Cancel
+              </Button>
             </Box>
           </Box>
         </Box>
@@ -417,9 +414,14 @@ function renderDialogFields(member, onChange) {
         <Box>{label}</Box>
         {required && <Box sx={HeaderStyled.asterisk}>*</Box>}
       </Box>
-      <TextField name={name} value={member[name] || ""} onChange={onChange}
-        placeholder={`Type ${label.toLowerCase()}`} sx={HeaderStyled.inputs}
-        inputProps={{ style: HeaderStyled.inputsvaluefonts }} />
+      <TextField
+        name={name}
+        value={member[name] || ""}
+        onChange={onChange}
+        placeholder={`Type ${label.toLowerCase()}`}
+        sx={HeaderStyled.inputs}
+        inputProps={{ style: HeaderStyled.inputsvaluefonts }}
+      />
     </Box>
   ));
 }

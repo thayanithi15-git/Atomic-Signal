@@ -6,7 +6,6 @@ import {
   Dialog,
   Divider,
   FormControl,
-  InputLabel,
   MenuItem,
   OutlinedInput,
   Select,
@@ -21,10 +20,8 @@ import { TeamContext } from "../usecontext/usecontext";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { IoIosSearch } from "react-icons/io";
-import { FaChevronDown } from "react-icons/fa6";
 import { LoginStyled } from "../login/loginstyled";
 import dayjs from "dayjs";
-import { DemoContainer, DemoItem } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
 
@@ -34,7 +31,6 @@ export default function Header({ onSearch }) {
   const [selectedPerformance, setSelectedPerformance] = useState("Impactful");
   const [selectedRole, setSelectedRole] = useState("Impactful");
   const { addMember } = useContext(TeamContext);
-  const [personName, setPersonName] = useState([]);
   const [Popup, setPopup] = useState(false);
   const [Welcome, setWelcome] = useState(false);
   const [newMember, setNewMember] = useState({
@@ -193,13 +189,6 @@ export default function Header({ onSearch }) {
 
   const roles = ["Design", "Engineering", "Development", "Training"];
 
-  const handleSelectChange = (event) => {
-    const {
-      target: { value },
-    } = event;
-    setPersonName(typeof value === "string" ? value.split(",") : value);
-  };
-
   return (
     <Box sx={HeaderStyled.header}>
       <Box sx={HeaderStyled.teammembers}>Team members</Box>
@@ -307,7 +296,6 @@ export default function Header({ onSearch }) {
             <Box sx={HeaderStyled.nameinputs}>
               <Box sx={HeaderStyled.nameasterisk}>
                 <Box>Department</Box>
-                {/* <Box sx={HeaderStyled.asterisk}>*</Box> */}
               </Box>
               <TextField
                 name="department"
@@ -378,7 +366,6 @@ export default function Header({ onSearch }) {
             <Box sx={HeaderStyled.nameinputs}>
               <Box sx={HeaderStyled.nameasterisk}>
                 <Box>Reporting to</Box>
-                {/* <Box sx={HeaderStyled.asterisk}>*</Box> */}
               </Box>
 
               <FormControl fullWidth size="small">
@@ -466,7 +453,6 @@ export default function Header({ onSearch }) {
               <Box sx={HeaderStyled.nameinputs}>
                 <Box sx={HeaderStyled.nameasterisk}>
                   <Box>Department</Box>
-                  {/* <Box sx={HeaderStyled.asterisk}>*</Box> */}
                 </Box>
                 <TextField
                   sx={HeaderStyled.inputs}
@@ -479,7 +465,6 @@ export default function Header({ onSearch }) {
               <Box sx={HeaderStyled.nameinputs}>
                 <Box sx={HeaderStyled.nameasterisk}>
                   <Box>Designation</Box>
-                  {/* <Box sx={HeaderStyled.asterisk}>*</Box> */}
                 </Box>
                 <TextField
                   sx={HeaderStyled.inputs}
@@ -492,7 +477,6 @@ export default function Header({ onSearch }) {
               <Box sx={HeaderStyled.nameinputs}>
                 <Box sx={HeaderStyled.nameasterisk}>
                   <Box>Reporting to</Box>
-                  {/* <Box sx={HeaderStyled.asterisk}>*</Box> */}
                 </Box>
                 <TextField
                   sx={HeaderStyled.inputs}

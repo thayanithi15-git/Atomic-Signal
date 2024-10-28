@@ -75,7 +75,7 @@ export const TableStyled = {
     padding: "3% 10%",
     borderRadius: "6px",
     textTransform: "none",
-    cursor: "pointer",  
+    cursor: "pointer",
   },
   edit: {
     color: "#49C792",
@@ -88,15 +88,43 @@ export const TableStyled = {
   inputsvaluefonts: {
     fontFamily: "Poppins, sans-serif",
     fontSize: "12px",
-    cursor: "pointer"
+    cursor: "pointer",
   },
   speedometercon: {
     display: "flex",
     justifyContent: "center",
     marginTop: "-23px",
-    cursor: "pointer"
+    cursor: "pointer",
   },
-  speedometer: {
-    
-  }
+  signaliconscon: {
+    display: "flex",
+    gap: "8px",
+  },
+  signalmain: {
+    width: 24,
+    height: 24,
+    borderRadius: "50%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    color: "#fff",
+    fontWeight: "bold",
+    fontSize: "12px",
+  },
+  tableCell: {
+    fontFamily: "Poppins, sans-serif",
+    fontSize: "16px",
+    color: "#353448",
+    fontWeight: "500",
+    borderBottom: "2px solid #EDEDED",
+    top: 0,
+  },
+  cellContent: {
+    fontFamily: "Poppins, sans-serif",
+    height: "100%",
+    width: "100%",
+    fontSize: "15px",
+    color: "#353448",
+    borderBottom: "none",
+  },
 };
