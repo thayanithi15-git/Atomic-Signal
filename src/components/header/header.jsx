@@ -52,8 +52,8 @@ export default function Header({ onSearch }) {
 
     const timer = setTimeout(() => {
       setWelcome(false);
-      setsetPopup(false);
-    }, 5000);
+      setPopup(false);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -163,6 +163,10 @@ export default function Header({ onSearch }) {
 
     setPopup(true);
     setAdd(false);
+
+    setTimeout(() => {
+      setPopup(false);
+    }, 3000);
   };
 
   const names = [
