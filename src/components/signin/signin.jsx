@@ -27,9 +27,9 @@ export default function Signin() {
   };
 
   const handleLoginreset = () => {
-    setSuccess(true)
+    setSuccess(true);
     navigate("/login");
-  }
+  };
 
   const handleGetLink = () => {
     navigate("/resetpassword");
@@ -64,7 +64,7 @@ export default function Signin() {
       ) : signin === "forgotpassword" ? (
         <ForgotPassword onLogin={handleLogin} onGetLink={handleGetLink} />
       ) : signin === "resetpassword" ? (
-        <ResetPassword onLogin={handleLoginreset} success={success}/>
+        <ResetPassword onLogin={handleLoginreset} success={success} />
       ) : null}
     </Box>
   );

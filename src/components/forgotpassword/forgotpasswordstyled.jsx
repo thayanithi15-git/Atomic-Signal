@@ -14,7 +14,7 @@ export const ForgotPasswordStyled = {
     height: "60%",
     display: "flex",
     flexDirection: "column",
-    gap: "1rem"
+    gap: "1rem",
     // justifyContent: "space-evenly"
     // Uncomment and adjust background color if needed
     // backgroundColor: "aqua",
@@ -24,25 +24,25 @@ export const ForgotPasswordStyled = {
     // backgroundColor: "aquamarine",
     display: "flex",
     flexDirection: "column",
-    gap: "1.5rem"
+    gap: "1.5rem",
     // justifyContent: "space-between"
   },
   welcomeQuotes: {
     height: "40%",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "space-evenly"
+    justifyContent: "space-evenly",
   },
   welcome: {
     fontSize: "20px",
     fontWeight: "bold",
-    color: "#0E1824"
+    color: "#0E1824",
   },
   quotes: {
     fontSize: "14px",
     color: "#555",
     width: "80%",
-    marginTop: "2%"
+    marginTop: "2%",
   },
   auth: {
     marginTop: "2%",
@@ -50,7 +50,7 @@ export const ForgotPasswordStyled = {
     height: "45%",
     display: "flex",
     flexDirection: "column",
-    gap: "0.5rem"
+    gap: "0.5rem",
   },
   emailPass: {
     fontSize: "12px",
@@ -60,28 +60,26 @@ export const ForgotPasswordStyled = {
   input: {
     width: "100%",
     fontFamily: "Poppins, sans-serif",
-      fontWeight: 500,
-      "& .MuiOutlinedInput-root": {
-        height: "40px",
-        width: "100%",
-        borderRadius: "4px",
-        overflow: "hidden",
-        backgroundColor: "#fff",
-        border: "1px solid #ebebeb",
-      },
-      "& .MuiOutlinedInput-notchedOutline": {
-        border: "none",
-      },
-      "& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline": {
-        borderColor: "#b0b0b0",
-      },
-      "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline": {
-        borderColor: "#3f51b5",
-      },
+    fontWeight: 500,
+    "& .MuiOutlinedInput-root": {
+      height: "40px",
+      width: "100%",
+      borderRadius: "4px",
+      overflow: "hidden",
+      backgroundColor: "#fff",
+      border: "1px solid #ebebeb",
     },
+    "& .MuiOutlinedInput-notchedOutline": {
+      border: "none",
+    },
+    "& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline": {
+      borderColor: "#b0b0b0",
+    },
+    "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline": {
+      borderColor: "#3f51b5",
+    },
+  },
 
-
-  
   getlink: {
     fontSize: "14px",
     marginTop: "3%",
@@ -98,7 +96,7 @@ export const ForgotPasswordStyled = {
     color: "#5C6266",
     fontSize: "14px",
     gap: "0.5rem",
-    marginTop: "2%"
+    marginTop: "2%",
   },
   signupLogin: {
     color: "#353448",

@@ -3,7 +3,6 @@ import { Box } from "@mui/material";
 import Sidebar from "../../components/sidebar/sidebar";
 import Team from "../body/team";
 import { HomeStyled } from "./homestyled";
-// import Header from "../header/header";
 
 export default function Home() {
   const [Page, setPage] = useState(2);

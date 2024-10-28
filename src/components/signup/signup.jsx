@@ -7,8 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { HeaderStyled } from "../header/headerstyled";
 
 export default function Signup({ onLogin }) {
-
-const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <Box sx={SignupStyled.page}>
@@ -28,7 +27,11 @@ const navigate = useNavigate()
         </Box>
         <Box sx={SignupStyled.microsoftSignup}>
           <Box sx={SignupStyled.iconContainer}>
-            <img src={Microsoft} alt="Microsoft Icon" style={SignupStyled.icons} />
+            <img
+              src={Microsoft}
+              alt="Microsoft Icon"
+              style={SignupStyled.icons}
+            />
           </Box>
           <Box>Sign up with Outlook</Box>
         </Box>
@@ -41,15 +44,18 @@ const navigate = useNavigate()
       <Box sx={SignupStyled.bottom}>
         <Box sx={SignupStyled.workEmail}>
           <Box>Work Email</Box>
-          <Box sx={{ color: "red" }}>*</Box>
+          <Box sx={SignupStyled.asterickred }>*</Box>
         </Box>
-        <TextField sx={SignupStyled.inputs} placeholder="Email" inputProps={{
-              style: { ...HeaderStyled.inputsvaluefonts },
-            }}/>
+        <TextField
+          sx={SignupStyled.inputs}
+          placeholder="Email"
+          inputProps={{
+            style: { ...HeaderStyled.inputsvaluefonts },
+          }}
+        />
         <Button
           sx={SignupStyled.signupbuttons}
-          onClick={() => navigate("/team")}
-        >
+          onClick={() => navigate("/team")}>
           Sign up
         </Button>
         <Box sx={SignupStyled.alreadyLogin}>

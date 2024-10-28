@@ -75,7 +75,10 @@ export default function Login({ onForgotPassword, success }) {
           <Box sx={LoginStyled.popupin}>
             <Box>Password reset successful</Box>
             <Divider orientation="vertical" sx={LoginStyled.hrtag} />
-            <RxCross2 style={LoginStyled.cross} onClick={() => setPopup(false)}/>
+            <RxCross2
+              style={LoginStyled.cross}
+              onClick={() => setPopup(false)}
+            />
           </Box>
         </Box>
       ) : (

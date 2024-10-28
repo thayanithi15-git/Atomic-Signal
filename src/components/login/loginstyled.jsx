@@ -46,7 +46,7 @@ export const LoginStyled = {
     fontSize: "14px",
     fontFamily: "Poppins, sans-serif",
     fontWeight: 400,
-    marginTop: "0.5%"
+    marginTop: "0.5%",
   },
   emailPass: {
     color: "#262c33",
@@ -92,7 +92,7 @@ export const LoginStyled = {
     },
   },
   popup: {
-    boxShadow: "0px 1px 5px rgba(0, 0, 0, 0.3)", 
+    boxShadow: "0px 1px 5px rgba(0, 0, 0, 0.3)",
     position: "absolute",
     width: "312px",
     height: "57px",
@@ -102,11 +102,11 @@ export const LoginStyled = {
     color: "#353448",
     fontFamily: "Poppins, sans-serif",
     fontWeight: 600,
-    right: 610, 
+    right: 610,
     top: 60,
     display: "flex",
     alignItems: "center",
-    justifyContent: "center "
+    justifyContent: "center ",
   },
   popupin: {
     display: "flex",
@@ -115,38 +115,37 @@ export const LoginStyled = {
     width: "90%",
     fontSize: "14px",
     color: "#353448",
-    
   },
   cross: {
     fontSize: "23px",
-    cursor: "pointer"
+    cursor: "pointer",
   },
-  hrtag :{
+  hrtag: {
     // color: "white",
     width: "1.5px",
     height: "30px",
     backgroundColor: "white",
-    border: "none"
+    border: "none",
   },
-  popuphome : {
-    boxShadow: "0px 1px 5px rgba(0, 0, 0, 0.3)", 
+  popuphome: {
+    boxShadow: "0px 1px 5px rgba(0, 0, 0, 0.3)",
     position: "absolute",
     width: "360px",
-height: "52px",
+    height: "52px",
     borderRadius: "12px",
     backgroundColor: "#CEF3E4",
     border: "1px solid #7FDCA4",
     color: "#353448",
     fontFamily: "Poppins, sans-serif",
     fontWeight: 600,
-    right: 650, 
+    right: 650,
     top: 113,
     display: "flex",
     alignItems: "center",
-    justifyContent: "center "
+    justifyContent: "center ",
   },
   popupwelcome: {
-    boxShadow: "0px 1px 5px rgba(0, 0, 0, 0.3)", 
+    boxShadow: "0px 1px 5px rgba(0, 0, 0, 0.3)",
     position: "absolute",
     width: "312px",
     height: "57px",
@@ -156,10 +155,10 @@ height: "52px",
     color: "#353448",
     fontFamily: "Poppins, sans-serif",
     fontWeight: 600,
-    right: 670, 
+    right: 670,
     top: 110,
     display: "flex",
     alignItems: "center",
-    justifyContent: "center "
-  }
+    justifyContent: "center ",
+  },
 };
