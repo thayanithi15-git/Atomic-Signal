@@ -1,93 +1,165 @@
 export const LoginStyled = {
-    page: {
-      height: "85%",
-      width: "90%",
-    },
-    atomicSignalImg: {
-      width: "170px",
-    },
-    body: {
-      height: "80%",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "space-between",
-    },
-    footer: {
-      height: "20%",
-      display: "flex",
-      alignItems: "center",
-    },
-    loginButton: {
-      textTransform: "none",
-      backgroundColor: "#49c792",
-      color: "#ffffff",
+  page: {
+    height: "85%",
+    width: "90%",
+  },
+  atomicSignalImg: {
+    width: "170px",
+  },
+  body: {
+    height: "80%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+  },
+  footer: {
+    height: "20%",
+    display: "flex",
+    alignItems: "center",
+  },
+  loginButton: {
+    textTransform: "none",
+    backgroundColor: "#49c792",
+    color: "#ffffff",
+    borderRadius: "4px",
+    width: "100%",
+    height: "50%",
+    fontFamily: "Poppins, sans-serif",
+    fontWeight: 500,
+    textAlign: "center",
+    marginTop: "1%",
+  },
+  welcomeQuotes: {
+    height: "25%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+  },
+  welcome: {
+    color: "#0e1824",
+    fontSize: "20px",
+    fontFamily: "Poppins, sans-serif",
+    fontWeight: 600,
+  },
+  quotes: {
+    color: "#71707e",
+    fontSize: "14px",
+    fontFamily: "Poppins, sans-serif",
+    fontWeight: 400,
+    marginTop: "0.5%"
+  },
+  emailPass: {
+    color: "#262c33",
+    fontSize: "12px",
+    fontFamily: "Poppins, sans-serif",
+    fontWeight: 500,
+  },
+  forgotPass: {
+    cursor: "pointer",
+    color: "#353448",
+    fontSize: "14px",
+    fontFamily: "Poppins, sans-serif",
+    fontWeight: 500,
+    textDecoration: "underline",
+    marginLeft: "auto",
+  },
+  auth: {
+    display: "flex",
+    flexDirection: "column",
+    height: "23%",
+    justifyContent: "space-between",
+  },
+  inputs: {
+    width: "100%",
+    fontFamily: "Poppins, sans-serif",
+    fontWeight: 500,
+    "& .MuiOutlinedInput-root": {
+      height: "40px",
+      width: "100%",
       borderRadius: "4px",
-      width: "100%",
-      height: "50%",
-      fontFamily: "Poppins, sans-serif",
-      fontWeight: 500,
-      textAlign: "center",
+      overflow: "hidden",
+      backgroundColor: "#fff",
+      border: "1px solid #ebebeb",
     },
-    welcomeQuotes: {
-      height: "25%",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "space-between",
+    "& .MuiOutlinedInput-notchedOutline": {
+      border: "none",
     },
-    welcome: {
-      color: "#0e1824",
-      fontSize: "20px",
-      fontFamily: "Poppins, sans-serif",
-      fontWeight: 600,
+    "& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline": {
+      borderColor: "#b0b0b0",
     },
-    quotes: {
-      color: "#71707e",
-      fontSize: "14px",
-      fontFamily: "Poppins, sans-serif",
-      fontWeight: 400,
+    "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline": {
+      borderColor: "#3f51b5",
     },
-    emailPass: {
-      color: "#262c33",
-      fontSize: "12px",
-      fontFamily: "Poppins, sans-serif",
-      fontWeight: 500,
-    },
-    forgotPass: {
-      cursor: "pointer",
-      color: "#353448",
-      fontSize: "14px",
-      fontFamily: "Poppins, sans-serif",
-      fontWeight: 500,
-      textDecoration: "underline",
-      marginLeft: "auto",
-    },
-    auth: {
-      display: "flex",
-      flexDirection: "column",
-      height: "23%",
-      justifyContent: "space-between",
-    },
-    inputs: {
-      width: "100%",
-      fontFamily: "Poppins, sans-serif",
-      fontWeight: 500,
-      "& .MuiOutlinedInput-root": {
-        height: "40px",
-        width: "100%",
-        borderRadius: "4px",
-        overflow: "hidden",
-        backgroundColor: "#fff",
-        border: "1px solid #ebebeb",
-      },
-      "& .MuiOutlinedInput-notchedOutline": {
-        border: "none",
-      },
-      "& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline": {
-        borderColor: "#b0b0b0",
-      },
-      "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline": {
-        borderColor: "#3f51b5",
-      },
-    },
-  };
-  
+  },
+  popup: {
+    boxShadow: "0px 1px 5px rgba(0, 0, 0, 0.3)", 
+    position: "absolute",
+    width: "312px",
+    height: "57px",
+    borderRadius: "12px",
+    backgroundColor: "#CEF3E4",
+    border: "1px solid #7FDCA4",
+    color: "#353448",
+    fontFamily: "Poppins, sans-serif",
+    fontWeight: 600,
+    right: 610, 
+    top: 60,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center "
+  },
+  popupin: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    width: "90%",
+    fontSize: "14px",
+    color: "#353448",
+    
+  },
+  cross: {
+    fontSize: "23px",
+    cursor: "pointer"
+  },
+  hrtag :{
+    // color: "white",
+    width: "1.5px",
+    height: "30px",
+    backgroundColor: "white",
+    border: "none"
+  },
+  popuphome : {
+    boxShadow: "0px 1px 5px rgba(0, 0, 0, 0.3)", 
+    position: "absolute",
+    width: "360px",
+height: "52px",
+    borderRadius: "12px",
+    backgroundColor: "#CEF3E4",
+    border: "1px solid #7FDCA4",
+    color: "#353448",
+    fontFamily: "Poppins, sans-serif",
+    fontWeight: 600,
+    right: 650, 
+    top: 113,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center "
+  },
+  popupwelcome: {
+    boxShadow: "0px 1px 5px rgba(0, 0, 0, 0.3)", 
+    position: "absolute",
+    width: "312px",
+    height: "57px",
+    borderRadius: "12px",
+    backgroundColor: "#CEF3E4",
+    border: "1px solid #7FDCA4",
+    color: "#353448",
+    fontFamily: "Poppins, sans-serif",
+    fontWeight: 600,
+    right: 670, 
+    top: 110,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center "
+  }
+};

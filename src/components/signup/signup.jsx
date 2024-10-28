@@ -4,6 +4,7 @@ import Google from "../../assets/Google.png";
 import Microsoft from "../../assets/Microsoft.png";
 import { SignupStyled } from "./signupstyled";
 import { useNavigate } from "react-router-dom";
+import { HeaderStyled } from "../header/headerstyled";
 
 export default function Signup({ onLogin }) {
 
@@ -42,14 +43,11 @@ const navigate = useNavigate()
           <Box>Work Email</Box>
           <Box sx={{ color: "red" }}>*</Box>
         </Box>
-        <TextField sx={SignupStyled.inputs} />
+        <TextField sx={SignupStyled.inputs} placeholder="Email" inputProps={{
+              style: { ...HeaderStyled.inputsvaluefonts },
+            }}/>
         <Button
-          sx={{
-            backgroundColor: "#49c792",
-            color: "white",
-            textTransform: "none",
-            fontFamily: "Poppins, sans-serif",
-          }}
+          sx={SignupStyled.signupbuttons}
           onClick={() => navigate("/team")}
         >
           Sign up

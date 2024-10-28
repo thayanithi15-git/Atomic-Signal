@@ -29,10 +29,10 @@ export const ResetPasswordStyled = {
       textAlign: "center",
     },
     welcomeQuotes: {
-      height: "27%",
+      height: "30%",
       display: "flex",
       flexDirection: "column",
-      justifyContent: "space-evenly",
+      justifyContent: "space-between",
     },
     welcome: {
       color: "#0e1824",
@@ -45,6 +45,7 @@ export const ResetPasswordStyled = {
       fontSize: "14px",
       fontFamily: "Poppins, sans-serif",
       fontWeight: 400,
+      width: "80%"
     },
     emailPass: {
       color: "#262c33",
@@ -74,7 +75,7 @@ export const ResetPasswordStyled = {
       display: "flex",
       flexDirection: "column",
       height: "28%",
-      justifyContent: "space-between",
+      justifyContent: "space-around",
     },
     inputs: {
       width: "100%",
@@ -98,5 +99,11 @@ export const ResetPasswordStyled = {
         borderColor: "#3f51b5",
       },
     },
+    success: {
+      position : 'absolute',
+      backgroundColor: "red",
+      height: "100px",
+      width: "100px"
+    }
   };
   

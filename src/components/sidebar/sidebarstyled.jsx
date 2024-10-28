@@ -61,7 +61,8 @@ export const SidebarStyled = {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        gap: "0.4rem"
+        gap: "0.4rem",
+        cursor: "pointer"
     },
     iconimgcontainer: {
         // width: "100%",

@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Button, TextField } from "@mui/material";
 import { ForgotPasswordStyled } from "./forgotpasswordstyled";
+import { HeaderStyled } from "../header/headerstyled";
 
 export default function ForgotPassword({onLogin,onGetLink}) {
   return (
@@ -17,6 +18,9 @@ export default function ForgotPassword({onLogin,onGetLink}) {
           <TextField
             placeholder="Type your email"
             sx={ForgotPasswordStyled.input}
+            inputProps={{
+              style: { ...HeaderStyled.inputsvaluefonts },
+            }}
           />
         </Box>
       </Box>

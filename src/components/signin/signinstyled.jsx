@@ -1,7 +1,7 @@
 
 export const SigninStyled = {
   page: {
-    width: "29%",
+    width: "28%",
     backgroundColor: "#ffffff",
     borderRadius: "12px",
     display: "flex",
@@ -21,5 +21,6 @@ export const SigninStyled = {
   },
   atomicsignalimg: {
     width: "170px",
-  }
+  },
+  
 };

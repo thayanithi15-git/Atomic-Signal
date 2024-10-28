@@ -3,8 +3,10 @@ import React, { useState } from "react";
 import { ResetPasswordStyled } from "./resetpasswordstyled";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import { HeaderStyled } from "../header/headerstyled";
 
 export default function ResetPassword({ onLogin }) {
+
   const [showNewPassword, setShowNewPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
@@ -15,6 +17,10 @@ export default function ResetPassword({ onLogin }) {
   const handleToggleConfirmPassword = () => {
     setShowConfirmPassword((prev) => !prev);
   };
+
+  const handleResetPassword = () => {
+    onLogin()
+  }
 
   return (
     <Box sx={ResetPasswordStyled.page}>
@@ -36,6 +42,7 @@ export default function ResetPassword({ onLogin }) {
             type={showNewPassword ? "text" : "password"}
             sx={ResetPasswordStyled.inputs}
             InputProps={{
+                style: { ...HeaderStyled.inputsvaluefonts },
               endAdornment: (
                 <InputAdornment position="end">
                   <IconButton onClick={handleToggleNewPassword} edge="end">
@@ -59,6 +66,7 @@ export default function ResetPassword({ onLogin }) {
             type={showConfirmPassword ? "text" : "password"}
             sx={ResetPasswordStyled.inputs}
             InputProps={{
+              style: { ...HeaderStyled.inputsvaluefonts },
               endAdornment: (
                 <InputAdornment position="end">
                   <IconButton onClick={handleToggleConfirmPassword} edge="end">
@@ -71,7 +79,7 @@ export default function ResetPassword({ onLogin }) {
         </Box>
       </Box>
       <Box sx={ResetPasswordStyled.footer}>
-        <Button sx={ResetPasswordStyled.loginButton} onClick={() => onLogin()}>
+        <Button sx={ResetPasswordStyled.loginButton} onClick={handleResetPassword}>
           Reset password
         </Button>
       </Box>
